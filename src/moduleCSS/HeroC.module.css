@@ -1,0 +1,52 @@
+:root {
+    --neon-pink: #ff00ff; /* color específico para HeroA */
+    --neon-blue: #00ffff;
+}
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5);  /* Lighter background for HeroC */
+}
+  
+  .content {
+    text-align: center;
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff, 0 0 100px #ff00ff;
+    font-size: 20px;
+  }
+  
+  .heroButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff, 0 0 100px #ff00ff;
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .heroButton:hover {
+    background-color: #ff35ff ;
+    transform: scale(1.3);
+  }
+  
+  .heroButton img {
+    width: 70px;
+    height: 70px;  /* Larger button for HeroC */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .heroButton:hover img {
+    transform: scale(1.5);  /* More pronounced hover effect */
+  }
+  

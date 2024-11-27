@@ -1,0 +1,33 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+  }
+  
+  .heroButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .heroButton img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .heroButton:hover img {
+    transform: scale(1.2);
+  }
+  

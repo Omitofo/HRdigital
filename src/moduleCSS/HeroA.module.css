@@ -1,0 +1,44 @@
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+  }
+  
+  .content {
+    text-align: center;
+    color: rgb(104, 16, 16); 
+    text-shadow: 
+     0 0 5px #ffe657,  /* Resplandor dorado suave */
+     0 0 10px #FFD700, 
+      0 0 20px #f2c879, /* Resplandor dorado cálido */
+      0 0 40px #FFFF00; /* Amarillo brillante más externo */
+     font-size: 20px;
+    font-weight: bold;
+}
+  
+  
+  .heroButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .heroButton img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .heroButton:hover img {
+    transform: scale(1.2);
+  }
+  
+  
