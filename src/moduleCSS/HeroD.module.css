@@ -48,7 +48,7 @@
 /* Slider with rotating effect */
 .slider {
     position: absolute;
-    width: 100px;
+    width: 150px;
     height: 100px;
     top: 10%; /* 20% */
     right: 35%;/*calc(50% - 100px);*/
@@ -105,7 +105,7 @@ img {
     font-size: 5em;
     margin: 0;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
 }
 
 /* Glitch Effect */
@@ -128,7 +128,7 @@ img {
 
 .parrafo {
     position: absolute;
-    bottom: 5vh;
+    bottom: 10px;
     right: 10px;
 }
 
@@ -148,58 +148,37 @@ img {
 /* Text in slider */
 .words {
     color: white;
-}
+    font-family: 'Nippon';
 
-/* Glitch Animation Keyframes */
-@keyframes glitchEffect1 {
-    0% { transform: translate(0, 0); }
-    20% { transform: translate(-5px, 5px); }
-    40% { transform: translate(5px, -5px); }
-    60% { transform: translate(-5px, -5px); }
-    80% { transform: translate(5px, 5px); }
-    100% { transform: translate(0, 0); }
-}
-
-@keyframes glitchEffect2 {
-    0% { transform: translate(0, 0); }
-    20% { transform: translate(5px, -5px); }
-    40% { transform: translate(-5px, 5px); }
-    60% { transform: translate(5px, 5px); }
-    80% { transform: translate(-5px, -5px); }
-    100% { transform: translate(0, 0); }
-}
-
-/* Glitch Class */
-.glitch {
-    position: relative;
-    animation: glitchEffect1 0.2s infinite alternate;
-}
-
-.glitch::after {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    z-index: -1;
-    animation: glitchEffect2 0.2s infinite alternate;
-    opacity: 0.7;
 }
 
 
-.declaration {
-    position: absolute;
-    top: 40%;
-    left: 5%;
+
+/* Regular font style */
+@font-face {
+    font-family: 'technor'; /* The same name for both styles */
+    src: url('../assets/fonts/Technor/Technor-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Regular.woff') format('woff');
+    font-weight: normal; /* Regular weight */
+    font-style: normal; /* Normal style */
+}
+
+/* Bold font style */
+@font-face {
+    font-family: 'technor'; /* Same name as the regular style */
+    src: url('../assets/fonts/Technor/Technor-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Bold.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
+}
+
+/* Black font style */
+@font-face {
+    font-family: 'technor'; /* Same name as the regular style */
+    src: url('../assets/fonts/Technor/Technor-Black.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Black.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
 }
 
 
-.declarationtext {
-    font-size: 2em;
-    font-weight: 800;
-    color: white;
-    -webkit-text-stroke: 1px rgb(0, 0, 0);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
