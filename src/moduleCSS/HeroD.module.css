@@ -1,68 +1,94 @@
-
+/* HeroButton */
 .heroButton {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: black;
+    background-color: rgb(120, 21, 103);
     cursor: pointer;
     width: 50px;
-    height: 20px;
-    border: 1px solid white;
+    height: 30px;
+    border: 2px solid black;
     border-radius: 15px;
 }
   
-.heroButton:hover  {
+.heroButton:hover {
     transform: scale(1.3);  /* Larger hover effect */
+    background-color: rgb(136, 121, 121);
 }
 
+/* Sun Image */
+.sun {
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+/* Space */
+.space {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    border-radius: 0;
+    top: 50px;
+    left: 0;
+    overflow: hidden;
+}
+
+/* Banner */
 .banner {
     width: 100%;
     height: 100vh;
     text-align: center;
     overflow: hidden;
     position: relative;
+    background-color: black;
 }
 
+/* Slider with rotating effect */
 .slider {
     position: absolute;
-    width: 200px;
-    height: 250px;
-    top: 10%;
-    left: calc(50% - 100px);
+    width: 100px;
+    height: 100px;
+    top: 10%; /* 20% */
+    right: 35%;/*calc(50% - 100px);*/
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    --quantity: 10; 
+    --quantity: 15; 
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
 
-@keyframes autoRun{
-    from{
-        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
-    }to{
-        transform: perspective(1000px)  rotateX(-14deg) rotateY(360deg);
-    };
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+    }
+    to {
+        transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+    }
 }
 
+/* Items in the slider */
 .item {
     position: absolute;
     inset: 0 0 0 0;
-    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+    transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(500px);
 }
 
+/* Images inside the items */
 img {
     width: 100%;
     height: 100%;  
     object-fit: cover;
-    border-radius: 15px;
 }
 
-.content{
+/* Content Styling */
+.content {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: min(1400px, 100vw);
+    width: min(1450px, 100vw);
     height: max-content;
     padding-bottom: 100px;
     display: flex;
@@ -70,15 +96,20 @@ img {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    color: white;
 }
 
+/* Main Heading */
 .ache1 {
-    font-size: 16em;
+    position: absolute;
+    font-size: 5em;
     margin: 0;
-    position: relative;
+    left: 0;
+    bottom: 0;
 }
 
-.ache1::after{
+/* Glitch Effect */
+.ache1::after {
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
@@ -87,23 +118,88 @@ img {
     color: transparent;
 }
 
+/* Author Section */
 .author {
     text-align: right;
     max-width: 200px;
+    z-index: 2;
 }
 
-.ache2 {
-    font-size: 2em;
+
+.parrafo {
+    position: absolute;
+    bottom: 5vh;
+    right: 10px;
 }
 
+/* Model Background */
 .model {
     width: 100%;
-    height: 75vh;
+    height: 70vh;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 1;
+}
+
+/* Text in slider */
+.words {
+    color: white;
+}
+
+/* Glitch Animation Keyframes */
+@keyframes glitchEffect1 {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(5px, -5px); }
+    60% { transform: translate(-5px, -5px); }
+    80% { transform: translate(5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+@keyframes glitchEffect2 {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(5px, -5px); }
+    40% { transform: translate(-5px, 5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(-5px, -5px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Glitch Class */
+.glitch {
+    position: relative;
+    animation: glitchEffect1 0.2s infinite alternate;
+}
+
+.glitch::after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    z-index: -1;
+    animation: glitchEffect2 0.2s infinite alternate;
+    opacity: 0.7;
+}
+
+
+.declaration {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+
+
+.declarationtext {
+    font-size: 2em;
+    font-weight: 800;
+    color: white;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
