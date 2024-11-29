@@ -8,7 +8,9 @@ const HeroD = ({ changeHero }) => {
         <>
         <div className={styles.banner}>
 
-            <div className={styles.space}><img src={Space} alt="space" /></div>
+            <div> </div>
+
+            <div className={styles.space}></div>
             <button onClick={() => changeHero('A')} className={styles.heroButton}> Únete a la lucha </button>
 
             <div className={styles.slider}>

@@ -36,13 +36,12 @@
 
 /* Space */
 .space {
-    height: 60vh;
-    width: 100vw;
-    position: fixed;
-    border-radius: 0;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+        height: 60vh; /* Adjust height as needed */
+        width: 100%;
+        background-image: url('../assets/abyss.jpg'); /* Use your image */
+        background-size: cover; /* Ensure the image covers the space */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Avoid tiling */
 }
 
 /* Banner */
