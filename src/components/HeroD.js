@@ -5,10 +5,11 @@ import styles from '../moduleCSS/HeroD.module.css';
 
 const HeroD = ({ changeHero }) => {
     return (
+        <>
         <div className={styles.banner}>
 
             <div className={styles.space}><img src={Space} alt="space" /></div>
-            <button onClick={() => changeHero('A')} className={styles.heroButton}></button>
+            <button onClick={() => changeHero('A')} className={styles.heroButton}> Únete a la lucha </button>
 
             <div className={styles.slider}>
                
@@ -35,10 +36,17 @@ const HeroD = ({ changeHero }) => {
                 <div className={styles.author}>
                     <p className={styles.parrafo}>Desarrollo Web</p>
                 </div>
+                <div className={styles.parrafo2}>
+                    <p>En un rincón olvidado del universo, donde las estrellas cuentan secretos a quienes saben escuchar, las ciudades flotan entre las nubes de gas y las razas más extrañas comparten mercados intergalácticos. Pero algo se avecina, una sombra que amenaza con borrar todo lo que conocemos...</p>
+                </div>
                 <div className={styles.model} style={{ backgroundImage: `url(${backgroundpic})` }}></div>
             </div>
 
         </div>
+
+       
+        
+        </>
     );
 };
 
