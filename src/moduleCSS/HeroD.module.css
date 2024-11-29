@@ -1,98 +1,129 @@
 /* HeroButton */
 .heroButton { 
-  position: absolute;
-  bottom: 50px;
-  right: 80px;
-  font-size: 1.5rem;
-  color: #fafafa;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 10px;
-  border: 2px solid #fafafa;
-  background: #252525;
-  box-shadow: 3px 3px #fafafa;
-  cursor: pointer;
-  margin: 35px 0;
-  z-index: 3;
-  font-family: 'Technor';
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza la transformación */
-
-}
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    font-size: 1.5rem;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #fafafa;
+    background: #252525;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+    z-index: 3;
+    font-family: 'Technor';
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza la transformación */
+  }
   
-.heroButton:active {
+  .heroButton:active {
     box-shadow: none;
     transform: translate(3px, 3px);
   }
-.heroButton:hover{
-  transform: scale(1.1);}
-
-/* Sun Image */
-.sun {
+  
+  .heroButton:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Language selection buttons */
+  .languageButtons {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre las banderas */
+    z-index: 10;
+  }
+  
+  .languageButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .flagIcon {
+    width: 40px; /* Tamaño adecuado para las banderas */
+    height: 30px;
+    border-radius: 5px;
+    transition: transform 0.2s ease; /* Efecto al pasar el cursor */
+  }
+  
+  .flagIcon:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+  }
+  
+  /* Sun Image */
+  .sun {
     width: 100px;
     position: absolute;
     top: 30px;
     left: 50px;
-}
-
-/* Space */
-.space {
-        height: 60vh; /* Adjust height as needed */
-        width: 100%;
-        background-image: url('../assets/abyss.jpg'); /* Use your image */
-        background-size: cover; /* Ensure the image covers the space */
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Avoid tiling */
-}
-
-/* Banner */
-.banner {
+  }
+  
+  /* Space */
+  .space {
+    height: 60vh; /* Adjust height as needed */
+    width: 100%;
+    background-image: url('../assets/abyss.jpg'); /* Use your image */
+    background-size: cover; /* Ensure the image covers the space */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid tiling */
+  }
+  
+  /* Banner */
+  .banner {
     width: 100%;
     height: 100vh;
     text-align: center;
     overflow: hidden;
     position: relative;
     background-color: black;
-}
-
-/* Slider with rotating effect */
-.slider {
+  }
+  
+  /* Slider with rotating effect */
+  .slider {
     position: absolute;
     width: 150px;
     height: 100px;
     top: 10%; /* 20% */
-    right: 35%;/*calc(50% - 100px);*/
+    right: 35%; /* calc(50% - 100px); */
     transform-style: preserve-3d;
     transform: perspective(1000px);
     --quantity: 15; 
     animation: autoRun 20s linear infinite;
     z-index: 2;
-}
-
-@keyframes autoRun {
+  }
+  
+  @keyframes autoRun {
     from {
-        transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
+      transform: perspective(1000px) rotateX(-5deg) rotateY(0deg);
     }
     to {
-        transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
+      transform: perspective(1000px) rotateX(-5deg) rotateY(360deg);
     }
-}
-
-/* Items in the slider */
-.item {
+  }
+  
+  /* Items in the slider */
+  .item {
     position: absolute;
     inset: 0 0 0 0;
     transform: rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(400px);
-}
-
-/* Images inside the items */
-img {
+  }
+  
+  /* Images inside the items */
+  img {
     width: 100%;
     height: 100%;  
     object-fit: cover;
-}
-
-/* Content Styling */
-.content {
+  }
+  
+  /* Content Styling */
+  .content {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -106,44 +137,43 @@ img {
     align-items: center;
     z-index: 1;
     color: white;
-}
-
-/* Main Heading */
-.ache1 {
+  }
+  
+  /* Main Heading */
+  .ache1 {
     position: absolute;
     font-size: 8em;
     margin: 0;
     left: 0;
     bottom: 50px;
     font-family: 'Technor';
-}
-
-/* Glitch Effect */
-.ache1::after {
+  }
+  
+  /* Glitch Effect */
+  .ache1::after {
     position: absolute;
     inset: 0 0 0 0;
     content: attr(data-content);
     z-index: 2;
     -webkit-text-stroke: 2px white;
     color: transparent;
-}
-
-/* Author Section */
-.author {
+  }
+  
+  /* Author Section */
+  .author {
     text-align: right;
     max-width: 200px;
     z-index: 2;
-}
-
-
-.parrafo {
+  }
+  
+  .parrafo {
     position: absolute;
     bottom: 30px;
     left: 30px;
     font-family: 'Technor';
-}
-
-.parrafo2 {
+  }
+  
+  .parrafo2 {
     position: absolute;
     left: 230px;
     bottom: 30px;
@@ -153,10 +183,10 @@ img {
     letter-spacing: 2px;
     font-family: 'Technor';
     font-size: 0.9em;
-}
-
-/* Model Background */
-.model {
+  }
+  
+  /* Model Background */
+  .model {
     width: 100%;
     height: 70vh;
     position: absolute;
@@ -166,40 +196,38 @@ img {
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 1;
-}
-
-/* Text in slider */
-.words {
+  }
+  
+  /* Text in slider */
+  .words {
     color: white;
     font-family: 'Nippon';
-
-}
-
-
-
-/* Regular font style */
-@font-face {
+  }
+  
+  /* Regular font style */
+  @font-face {
     font-family: 'technor'; /* The same name for both styles */
     src: url('../assets/fonts/Technor/Technor-Regular.woff2') format('woff2'),
          url('../assets/fonts/Technor/Technor-Regular.woff') format('woff');
     font-weight: normal; /* Regular weight */
     font-style: normal; /* Normal style */
-}
-
-/* Bold font style */
-@font-face {
+  }
+  
+  /* Bold font style */
+  @font-face {
     font-family: 'technor'; /* Same name as the regular style */
     src: url('../assets/fonts/Technor/Technor-Bold.woff2') format('woff2'),
          url('../assets/fonts/Technor/Technor-Bold.woff') format('woff');
     font-weight: bold; /* Bold weight */
     font-style: normal; /* Normal style */
-}
-
-/* Black font style */
-@font-face {
+  }
+  
+  /* Black font style */
+  @font-face {
     font-family: 'technor'; /* Same name as the regular style */
     src: url('../assets/fonts/Technor/Technor-Black.woff2') format('woff2'),
          url('../assets/fonts/Technor/Technor-Black.woff') format('woff');
     font-weight: bold; /* Bold weight */
     font-style: normal; /* Normal style */
-}
+  }
+  
