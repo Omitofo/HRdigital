@@ -31,7 +31,19 @@ const HeroD = ({ changeHero }) => {
     return (
         <>
             <div className={styles.banner}>
-                <div className={styles.space}></div>
+            <header className={styles.arriba}>
+                <div className={styles.navLeft}>
+                    <h3 className={styles.navarriba}>{t.community}</h3>
+                    <h3 className={styles.navarriba}>{t.servers}</h3>
+                    <h3 className={styles.navarriba}>{t.blog}</h3>
+                </div>
+                <div className={styles.navRight}>
+                    <button className={styles.authButton}>{t.logIn}</button>
+                    <button className={styles.authButton}>{t.signUp}</button>
+                </div>
+            </header>
+
+
 
                 {/* Language selection buttons */}
                 <div className={styles.languageButtons}>
