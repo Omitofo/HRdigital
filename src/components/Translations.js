@@ -3,7 +3,7 @@ export const translations = {
         joinTheFight: "Join the Fight",
         welcome: "Welcome",
         development: "Web Development",
-        description: "In a forgotten corner of the universe, where stars whisper secrets to those who listen, cities float among clouds of gas, and the strangest races share intergalactic markets. But something is coming, a shadow that threatens to erase everything we know...",
+        description: "In a forgotten corner of the universe, where stars whisper secrets to those who listen, cities float among clouds of gas, and the weirdest races share intergalactic markets. But something is coming, a shadow that threatens to erase everything we know...",
         community: "Community",
         servers: "Servers",
         blog: "Blog",

@@ -55,8 +55,8 @@
 
 .heroButton { 
     position: absolute;
-    bottom: 50px;
-    right: 80px;
+    bottom: 100px;
+    right: 150px;
     font-size: 1.5rem;
     color: #fafafa;
     text-transform: uppercase;
@@ -230,7 +230,7 @@
   .parrafo {
     position: absolute;
     bottom: 30px;
-    left: 30px;
+    left: 0;
     font-family: 'Technor';
   }
   
