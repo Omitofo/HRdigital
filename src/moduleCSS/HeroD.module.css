@@ -101,8 +101,8 @@
   }
   
   .flagIcon {
-    width: 40px; /* Tamaño adecuado para las banderas */
-    height: 30px;
+    width: 35px; /* Tamaño adecuado para las banderas */
+    height: 20px;
     border-radius: 5px;
     transition: transform 0.2s ease; /* Efecto al pasar el cursor */
   }
@@ -152,7 +152,7 @@
     width: 150px;
     height: 100px;
     top: 15%; /* 20% */
-    right: 35%; /* calc(50% - 100px); */
+    right: 32%; /* calc(50% - 100px); */
     transform-style: preserve-3d;
     transform: perspective(1000px);
     --quantity: 15; 

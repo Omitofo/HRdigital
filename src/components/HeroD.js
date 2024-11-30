@@ -67,7 +67,7 @@ const HeroD = ({ changeHero }) => {
                     </button>
                 </div>
 
-                <button onClick={() => changeHero('A')} className={styles.heroButton}>
+                <button onClick={() => changeHero('E')} className={styles.heroButton}>
                     {t.joinTheFight}
                 </button>
 

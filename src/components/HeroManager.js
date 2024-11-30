@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import HeroA from './HeroA';
-import HeroB from './HeroB';
 import HeroC from './HeroC';
 import HeroD from './HeroD';
+import Cookies from './Cookies';
 
 const HeroManager = () => {
-    const [currentHero, setCurrentHero] = useState('A');
+    const [currentHero, setCurrentHero] = useState('C');
   
     const changeHero = (hero) => {
       setCurrentHero(hero);
@@ -13,10 +12,12 @@ const HeroManager = () => {
   
     return (
       <>
-        {currentHero === 'A' && <HeroA changeHero={changeHero} />}
-        {currentHero === 'B' && <HeroB changeHero={changeHero} />}
+        
         {currentHero === 'C' && <HeroC changeHero={changeHero} />}
         {currentHero === 'D' && <HeroD changeHero={changeHero} />}
+        {currentHero === 'E' && <Cookies changeHero={changeHero} />}
+
+        
       </>
     );
   };
