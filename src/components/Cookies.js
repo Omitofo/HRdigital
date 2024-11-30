@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Cookie1 from '../assets/Cookies/cookies1.jpg';
 import Cookie2 from '../assets/Cookies/cookies2.jpg';
 import styles from '../moduleCSS/Cookies.module.css';
@@ -9,14 +9,10 @@ const Cookies = ({ changeHero }) => {
     const [active, setActive] = useState(0); // First image starts active
     const [isFirstRender, setIsFirstRender] = useState(true); // Track first render
 
-    const images = [Cookie1, Cookie2, Cookie1, Cookie2]; // Array of images
-
-    const runCarousel = () => {
+    // Use useCallback to memoize the runCarousel function
+    const runCarousel = useCallback(() => {
         const items = listRef.current?.children;
         if (!items) return;
-
-        // Calculate total width of all items in the list
-        const totalWidth = Array.from(items).reduce((acc, item) => acc + item.offsetWidth, 0);
 
         // Width of the slider container
         const sliderWidth = sliderRef.current.offsetWidth;
@@ -28,16 +24,19 @@ const Cookies = ({ changeHero }) => {
 
         // Apply the transform to center the active item
         listRef.current.style.transform = `translateX(-${offset}px)`;
-    };
+    }, [active]);
 
     const handlePrev = () => {
+        // Prevent going below 0, but still allow going to the first image
         setActive((prev) => (prev === 0 ? prev : prev - 1));
     };
 
     const handleNext = () => {
-        setActive((prev) => (prev === images.length - 1 ? prev : prev + 1)); // Prevent going beyond last item
+        const items = listRef.current?.children || [];
+        setActive((prev) => (prev === items.length - 1 ? prev : prev + 1)); // Prevent going beyond last item
     };
 
+    // Set transition state after the first render
     useEffect(() => {
         if (isFirstRender) {
             // Initially, disable transition for the first render
@@ -49,7 +48,11 @@ const Cookies = ({ changeHero }) => {
         }
 
         runCarousel();
-    }, [active, isFirstRender]);
+    }, [active, isFirstRender, runCarousel]); // Added runCarousel to the dependency array
+
+    // Check if there are no more images to navigate
+    const isPrevDisabled = active === 0;
+    const isNextDisabled = active === 3; // Assuming there are 4 images
 
     return (
         <section className={styles.container}>
@@ -68,7 +71,7 @@ const Cookies = ({ changeHero }) => {
 
             <div className={styles.slider} ref={sliderRef}>
                 <div className={styles.list} ref={listRef}>
-                    {images.map((imgSrc, index) => (
+                    {[Cookie1, Cookie2, Cookie1, Cookie2].map((imgSrc, index) => (
                         <div
                             key={index}
                             className={`${styles.item} ${index === active ? styles.active : ''}`}
@@ -76,7 +79,7 @@ const Cookies = ({ changeHero }) => {
                             <img
                                 className={styles.image}
                                 src={imgSrc}
-                                alt="cookie"
+                                alt="galleta"
                             />
                         </div>
                     ))}
@@ -89,16 +92,16 @@ const Cookies = ({ changeHero }) => {
 
                 <div className={styles.arrows}>
                     <button
-                        className={`${styles.prev} ${active === 0 ? styles.disabled : ''}`}
+                        className={`${styles.prev} ${isPrevDisabled ? styles.disabled : ''}`}
                         onClick={handlePrev}
-                        disabled={active === 0}
+                        disabled={isPrevDisabled}  // Disables the button
                     >
                         {'<'}
                     </button>
                     <button
-                        className={`${styles.next} ${active === images.length - 1 ? styles.disabled : ''}`}
+                        className={`${styles.next} ${isNextDisabled ? styles.disabled : ''}`}
                         onClick={handleNext}
-                        disabled={active === images.length - 1}
+                        disabled={isNextDisabled}  // Disables the button
                     >
                         {'>'}
                     </button>
