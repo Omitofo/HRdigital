@@ -6,7 +6,7 @@ const CookieHeader = () => {
         <header className={styles.cookieHeader}>
             {/* Desktop/Tablet Header */}
             <div className={styles.desktopHeader}>
-                <h2>Explore Monster Cookies</h2>
+                <h2> Monster Cookies</h2>
             </div>
 
             {/* Mobile Header (Sticky Bottom) */}

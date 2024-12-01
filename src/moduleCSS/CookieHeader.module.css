@@ -8,29 +8,35 @@
 .desktopHeader {
     display: none;
     background-color: #2a3b3a;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 .desktopHeader h2 {
     font-size: 1.8rem;
     color: #fff;
+    
 }
 
 /* Mobile Header */
 .mobileHeader {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
-    background-color: #17232a;
+    background-color: rgba(23, 35, 42, 0.8); /* Fondo semitransparente */
+    backdrop-filter: blur(2px); /* Efecto de desenfoque */
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
+
 
 .navButton {
     background: #2a3b3a;
@@ -57,3 +63,11 @@
         display: none;
     }
 }
+
+@font-face {
+    font-family: 'nunito'; /* Same name as the regular style */
+    src: url('../assets/fonts/Nunito/Nunito-Black.woff2') format('woff2'),
+         url('../assets/fonts/Nunito/Nunito-Black.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
+  }
