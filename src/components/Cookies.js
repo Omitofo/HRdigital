@@ -1,47 +1,48 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Cookie1 from '../assets/Cookies/cookies1.jpg';
 import styles from '../moduleCSS/Cookies.module.css';
+import CookieHeader from './CookieHeader';
 
 const Cookies = () => {
     const [active, setActive] = useState(0);
     const sliderRef = useRef(null);
 
     const cookiesData = [
-        { 
-            name: 'Chocolate Chip', 
-            image: Cookie1, 
-            ingredients: 'Flour, Sugar, Butter, Chocolate Chips', 
-            description: 'A delicious chocolate chip cookie made with love.' 
+        {
+            name: 'Chocolate Chip',
+            image: Cookie1,
+            ingredients: 'Flour, Sugar, Butter, Chocolate Chips',
+            description: 'A delicious chocolate chip cookie made with love.',
         },
-        { 
-            name: 'Oatmeal Raisin', 
-            image: Cookie1, 
-            ingredients: 'Oats, Raisins, Flour, Butter', 
-            description: 'A healthy oatmeal raisin cookie with a chewy texture.' 
+        {
+            name: 'Oatmeal Raisin',
+            image: Cookie1,
+            ingredients: 'Oats, Raisins, Flour, Butter',
+            description: 'A healthy oatmeal raisin cookie with a chewy texture.',
         },
-        { 
-            name: 'Peanut Butter', 
-            image: Cookie1, 
-            ingredients: 'Peanut Butter, Sugar, Eggs', 
-            description: 'A soft peanut butter cookie with a rich flavor.' 
+        {
+            name: 'Peanut Butter',
+            image: Cookie1,
+            ingredients: 'Peanut Butter, Sugar, Eggs',
+            description: 'A soft peanut butter cookie with a rich flavor.',
         },
-        { 
-            name: 'Double Chocolate', 
-            image: Cookie1, 
-            ingredients: 'Cocoa, Chocolate Chips, Butter', 
-            description: 'A double dose of chocolate for the chocolate lover.' 
+        {
+            name: 'Double Chocolate',
+            image: Cookie1,
+            ingredients: 'Cocoa, Chocolate Chips, Butter',
+            description: 'A double dose of chocolate for the chocolate lover.',
         },
-        { 
-            name: 'Snickerdoodle', 
-            image: Cookie1, 
-            ingredients: 'Cinnamon, Sugar, Flour, Butter', 
-            description: 'A soft and chewy cookie with a cinnamon-sugar coating.' 
+        {
+            name: 'Snickerdoodle',
+            image: Cookie1,
+            ingredients: 'Cinnamon, Sugar, Flour, Butter',
+            description: 'A soft and chewy cookie with a cinnamon-sugar coating.',
         },
-        { 
-            name: 'White Chocolate', 
-            image: Cookie1, 
-            ingredients: 'White Chocolate Chips, Flour, Sugar, Butter', 
-            description: 'A creamy white chocolate cookie that melts in your mouth.' 
+        {
+            name: 'White Chocolate',
+            image: Cookie1,
+            ingredients: 'White Chocolate Chips, Flour, Sugar, Butter',
+            description: 'A creamy white chocolate cookie that melts in your mouth.',
         },
     ];
 
@@ -65,10 +66,7 @@ const Cookies = () => {
 
     return (
         <section className={styles.cookiesContainer}>
-            <header className={styles.cookiesHeader}>
-                <h1> Monster Cookies</h1>
-            </header>
-
+            <CookieHeader />
             <div className={styles.cookiesCarousel}>
                 <div className={styles.cookiesSliderWrapper}>
                     <div className={styles.cookiesSlider} ref={sliderRef}>

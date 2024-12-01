@@ -1,0 +1,59 @@
+.cookieHeader {
+    width: 100%;
+    color: #fff;
+    font-family: 'nunito', sans-serif;
+}
+
+/* Desktop Header */
+.desktopHeader {
+    display: none;
+    background-color: #2a3b3a;
+    padding: 20px;
+    text-align: center;
+}
+
+.desktopHeader h2 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* Mobile Header */
+.mobileHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #17232a;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.navButton {
+    background: #2a3b3a;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.navButton:hover {
+    background: #3a4b4a;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .desktopHeader {
+        display: block;
+    }
+
+    .mobileHeader {
+        display: none;
+    }
+}
