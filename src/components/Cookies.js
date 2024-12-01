@@ -86,7 +86,7 @@ const Cookies = ({ changeHero }) => {
                 </div>
 
                 <div className={styles.content}>
-                    <div className={styles.title}>Monster Cookies</div>
+                    <div className={styles.title}>Monster Cookies </div>
                     <button className={styles.boton}>See more</button>
                 </div>
 

@@ -105,9 +105,10 @@
 
 /* Title inside the content */
 .title {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5em;
     margin-bottom: 10px;
+    width: 800px;
 }
 
 /* "See more" button styling */
@@ -169,3 +170,11 @@
     cursor: not-allowed;
     border-color: #555;
 }
+
+@font-face {
+    font-family: 'nunito'; /* Same name as the regular style */
+    src: url('../assets/fonts/Nunito/Nunito-Black.woff2') format('woff2'),
+         url('../assets/fonts/Nunito/Nunito-Black.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
+  }
