@@ -1,110 +1,121 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Cookie1 from '../assets/Cookies/cookies1.jpg';
-import Cookie2 from '../assets/Cookies/cookies2.jpg';
 import styles from '../moduleCSS/Cookies.module.css';
 
-const Cookies = ({ changeHero }) => {
+const Cookies = () => {
+    const [active, setActive] = useState(0);
     const sliderRef = useRef(null);
-    const listRef = useRef(null);
-    const [active, setActive] = useState(0); // First image starts active
-    const [isFirstRender, setIsFirstRender] = useState(true); // Track first render
 
-    // Use useCallback to memoize the runCarousel function
-    const runCarousel = useCallback(() => {
-        const items = listRef.current?.children;
-        if (!items) return;
-
-        // Width of the slider container
-        const sliderWidth = sliderRef.current.offsetWidth;
-
-        // Center the active image
-        const activeItem = items[active];
-        const activeWidth = activeItem.offsetWidth;
-        const offset = activeItem.offsetLeft + activeWidth / 2 - sliderWidth / 2;
-
-        // Apply the transform to center the active item
-        listRef.current.style.transform = `translateX(-${offset}px)`;
-    }, [active]);
-
-    const handlePrev = () => {
-        // Prevent going below 0, but still allow going to the first image
-        setActive((prev) => (prev === 0 ? prev : prev - 1));
-    };
+    const cookiesData = [
+        { 
+            name: 'Chocolate Chip', 
+            image: Cookie1, 
+            ingredients: 'Flour, Sugar, Butter, Chocolate Chips', 
+            description: 'A delicious chocolate chip cookie made with love.' 
+        },
+        { 
+            name: 'Oatmeal Raisin', 
+            image: Cookie1, 
+            ingredients: 'Oats, Raisins, Flour, Butter', 
+            description: 'A healthy oatmeal raisin cookie with a chewy texture.' 
+        },
+        { 
+            name: 'Peanut Butter', 
+            image: Cookie1, 
+            ingredients: 'Peanut Butter, Sugar, Eggs', 
+            description: 'A soft peanut butter cookie with a rich flavor.' 
+        },
+        { 
+            name: 'Double Chocolate', 
+            image: Cookie1, 
+            ingredients: 'Cocoa, Chocolate Chips, Butter', 
+            description: 'A double dose of chocolate for the chocolate lover.' 
+        },
+        { 
+            name: 'Snickerdoodle', 
+            image: Cookie1, 
+            ingredients: 'Cinnamon, Sugar, Flour, Butter', 
+            description: 'A soft and chewy cookie with a cinnamon-sugar coating.' 
+        },
+        { 
+            name: 'White Chocolate', 
+            image: Cookie1, 
+            ingredients: 'White Chocolate Chips, Flour, Sugar, Butter', 
+            description: 'A creamy white chocolate cookie that melts in your mouth.' 
+        },
+    ];
 
     const handleNext = () => {
-        const items = listRef.current?.children || [];
-        setActive((prev) => (prev === items.length - 1 ? prev : prev + 1)); // Prevent going beyond last item
+        if (active < cookiesData.length - 1) {
+            setActive((prev) => prev + 1);
+        }
     };
 
-    // Set transition state after the first render
-    useEffect(() => {
-        if (isFirstRender) {
-            // Initially, disable transition for the first render
-            listRef.current.style.transition = 'none';
-            setIsFirstRender(false); // After first render, reset
-        } else {
-            // Enable transition after the first render
-            listRef.current.style.transition = 'transform 0.8s ease-in-out';
+    const handlePrev = () => {
+        if (active > 0) {
+            setActive((prev) => prev - 1);
         }
+    };
 
-        runCarousel();
-    }, [active, isFirstRender, runCarousel]); // Added runCarousel to the dependency array
-
-    // Check if there are no more images to navigate
-    const isPrevDisabled = active === 0;
-    const isNextDisabled = active === 3; // Assuming there are 4 images
+    useEffect(() => {
+        if (sliderRef.current) {
+            sliderRef.current.style.transform = `translateX(-${active * 100}%)`;
+        }
+    }, [active]);
 
     return (
-        <section className={styles.container}>
-            <header className={styles.header}>
-                <nav>
-                    <ul className={styles.navList}>
-                        <li>HOME</li>
-                        <li>CONTACT</li>
-                        <li>ABOUT US</li>
-                    </ul>
-                </nav>
-                <button onClick={() => changeHero('C')} className={styles.heroButton}>
-                    Inicio
-                </button>
+        <section className={styles.cookiesContainer}>
+            <header className={styles.cookiesHeader}>
+                <h1> Monster Cookies</h1>
             </header>
 
-            <div className={styles.slider} ref={sliderRef}>
-                <div className={styles.list} ref={listRef}>
-                    {[Cookie1, Cookie2, Cookie1, Cookie2].map((imgSrc, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.item} ${index === active ? styles.active : ''}`}
-                        >
-                            <img
-                                className={styles.image}
-                                src={imgSrc}
-                                alt="galleta"
-                            />
-                        </div>
-                    ))}
-                </div>
+            <div className={styles.cookiesCarousel}>
+                <div className={styles.cookiesSliderWrapper}>
+                    <div className={styles.cookiesSlider} ref={sliderRef}>
+                        {cookiesData.map((cookie, index) => (
+                            <div
+                                key={index}
+                                className={`${styles.cookiesSlide} ${
+                                    index === active ? styles.active : ''
+                                }`}
+                            >
+                                <img
+                                    src={cookie.image}
+                                    alt={cookie.name}
+                                    className={styles.cookiesImage}
+                                />
+                                <h2 className={styles.cookiesName}>{cookie.name}</h2>
+                            </div>
+                        ))}
+                    </div>
 
-                <div className={styles.content}>
-                    <div className={styles.title}>Monster Cookies </div>
-                    <button className={styles.boton}>See more</button>
-                </div>
-
-                <div className={styles.arrows}>
+                    {/* Arrows */}
                     <button
-                        className={`${styles.prev} ${isPrevDisabled ? styles.disabled : ''}`}
+                        className={`${styles.cookiesArrow} ${styles.left}`}
                         onClick={handlePrev}
-                        disabled={isPrevDisabled}  // Disables the button
+                        disabled={active === 0}
                     >
                         {'<'}
                     </button>
                     <button
-                        className={`${styles.next} ${isNextDisabled ? styles.disabled : ''}`}
+                        className={`${styles.cookiesArrow} ${styles.right}`}
                         onClick={handleNext}
-                        disabled={isNextDisabled}  // Disables the button
+                        disabled={active === cookiesData.length - 1}
                     >
                         {'>'}
                     </button>
+                </div>
+
+                {/* Ingredients and Description */}
+                <div className={styles.cookiesTextContainer}>
+                    <div className={styles.cookiesIngredients}>
+                        <h3>Ingredients</h3>
+                        <p>{cookiesData[active].ingredients}</p>
+                    </div>
+                    <div className={styles.cookiesDescription}>
+                        <h3>Description</h3>
+                        <p>{cookiesData[active].description}</p>
+                    </div>
                 </div>
             </div>
         </section>
