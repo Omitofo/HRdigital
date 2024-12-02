@@ -44,7 +44,6 @@
     border-radius: 8px;
     padding: 10px 15px;
     font-size: 1rem;
-    cursor: pointer;
     transition: background 0.3s ease;
 }
 
@@ -52,10 +51,15 @@
     background: #3a4b4a;
 }
 
+.navButton:active {
+    transform: scale(1.1);
+}
+
 .iconImage {
     width: 20px;
     height: 20px;
 }
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .desktopHeader {
