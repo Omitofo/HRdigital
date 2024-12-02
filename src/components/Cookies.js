@@ -67,7 +67,9 @@ const Cookies = () => {
     return (
         <section className={styles.cookiesContainer}>
             <CookieHeader />
+           
             <div className={styles.cookiesCarousel}>
+            <div className={styles.tituloCabezera}><h1>Monster Cookies</h1></div>
                 <div className={styles.cookiesSliderWrapper}>
                     <div className={styles.cookiesSlider} ref={sliderRef}>
                         {cookiesData.map((cookie, index) => (

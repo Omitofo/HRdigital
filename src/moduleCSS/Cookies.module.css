@@ -6,19 +6,9 @@
     padding: 0 ;
     text-align: center;
     min-height: 100vh;
+    cursor: url('../assets/cookie.png'), auto;
 }
 
-/* Header for Cookies */
-.cookiesHeader {
-    margin-bottom: 20px;
-}
-
-.cookiesHeader h1 {
-    font-size: 2rem;
-    color: #fff;
-    font-family: 'nunito','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
 
 /* Carousel */
 .cookiesCarousel {
@@ -105,15 +95,18 @@
 .cookiesArrow:hover:not(:disabled) {
     background: #fff;
     color: #333;
+    cursor: url('../assets/cookie.png'), auto;
 }
 
 .cookiesArrow.left {
     left: 20px;
+    
 }
 
 .cookiesArrow.right {
     right: 20px;
 }
+
 
 .cookiesIngredients h3,
 .cookiesDescription h3 {
@@ -139,6 +132,11 @@
         padding-bottom: 60px; /* Espacio para el mobileHeader */
     }
 
+    .tituloCabezera h1{
+        font-size: 3em;
+        margin: 0;
+        padding-top: 20px;
+       }
     .cookiesSliderWrapper {
         flex-direction: column;
     }
@@ -199,6 +197,13 @@
 
 /* Desktop Styles */
 @media (min-width: 769px) {
+
+    .tituloCabezera h1{
+        font-size: 8em;
+        margin: 0;
+       }
+
+ 
     .cookiesTextContainer {
         display: flex;
         justify-content: center;
