@@ -31,14 +31,14 @@
     margin-top: 20px;
     background-color: #ff00ff;
     text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff, 0 0 100px #ff00ff;
-    padding: 25px;
+    padding: 10px 20px;
     border-radius: 15px;
     color: white;
   }
 
   .heroButton:hover {
     background-color: #ff35ff ;
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
   
   .heroButton img {
