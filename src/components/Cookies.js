@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Cookie1 from '../assets/Cookies/chipcookie4.png';
+import Cookie1 from '../assets/Cookies/chipcookie3.png';
 import Cookie2 from '../assets/Cookies/oatmeal1.png';
 import Cookie3 from '../assets/Cookies/peanut2.png';
 import Cookie4 from '../assets/Cookies/double1.png';
