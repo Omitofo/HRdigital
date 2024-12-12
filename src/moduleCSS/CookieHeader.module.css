@@ -43,8 +43,25 @@ body, html {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
+.heroButton {
+    background: #2a3b3a;
+    color: #fff;
+    border: 2px solid #2cc10739;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+.heroButton img {
+    padding: 0;
+    margin: 0;
+    padding-top: 2px;
+}
 
-
+.heroButton:hover{
+    background: #3a4b4a;
+    cursor: pointer;
+}
 .navButton {
     background: #2a3b3a;
     color: #fff;
@@ -57,6 +74,7 @@ body, html {
 
 .navButton:hover {
     background: #3a4b4a;
+    cursor: pointer;
 }
 
 .navButton:active {
@@ -67,6 +85,7 @@ body, html {
     width: 20px;
     height: 20px;
 }
+
 
 /* Responsive Design */
 @media (min-width: 768px) {

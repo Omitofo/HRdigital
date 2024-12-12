@@ -3,7 +3,7 @@ import Cookie1 from '../assets/Cookies/cookies1.jpg';
 import styles from '../moduleCSS/Cookies.module.css';
 import CookieHeader from './CookieHeader';
 
-const Cookies = () => {
+const Cookies = ( {changeHero}) => {
     const [active, setActive] = useState(0);
     const sliderRef = useRef(null);
 
@@ -66,7 +66,7 @@ const Cookies = () => {
 
     return (
         <section className={styles.cookiesContainer}>
-            <CookieHeader />
+            <CookieHeader changeHero={changeHero} />
             <div className={styles.tituloCabezera}><h1>Monster Cookies</h1></div>
             <div className={styles.cookiesContent}>
                 {/* Image and Text Carousel */}
@@ -84,8 +84,9 @@ const Cookies = () => {
                                             alt={cookie.name}
                                             className={styles.cookiesImage}
                                         />
+                                        
                                         <div className={styles.textInfo}>
-                                            <h2 className={styles.cookiesName}>{cookie.name}</h2>
+                                        <h2 className={styles.cookiesName}>{cookie.name}</h2>
                                             <div className={styles.cookiesIngredients}>
                                                 <h3>Ingredients</h3>
                                                 <p>{cookie.ingredients}</p>
