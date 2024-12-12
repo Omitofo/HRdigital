@@ -140,7 +140,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .cookiesContainer {
         box-sizing: border-box; 
@@ -182,7 +182,7 @@
 }
 
 /* Desktop Styles */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
     .tituloCabezera h1 {
         font-size: 8em;
@@ -217,6 +217,114 @@
         margin-bottom: 5px;
     }
 }
+
+/* Tablet Styles */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .cookiesContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start; /* Center contentvertically */
+
+        align-items:center; /* Align horizontally */
+        padding: 20px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .tituloCabezera h1 {
+        font-size: 5em; /* Adjust title size for tablets */
+        margin: 0; /* Space below title */
+        padding-top:0;
+        margin-top: 2vh;
+    }
+
+    .cookiesSliderWrapper {
+        height: auto; /* Let the height adapt naturally */
+        flex-direction: column; /* Ensure stacking in one column */
+    }
+
+    .slideContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px; /* Adjust spacing between items */
+    }
+
+    .cookiesImage {
+        margin-top: 50px;
+        width: 400px; /* Slightly larger image size for tablets */
+        height: 400px;
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .textInfo {
+        max-width: 90%; /* Ensure text doesn't take up full width */
+        padding: 0 15px;
+        font-size: 1em; /* Scale text for readability */
+    }
+
+    .cookiesName {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    .cookiesIngredients h3,
+    .cookiesDescription h3 {
+        font-size: 1.3em; /* Adjust subtitles for clarity */
+        margin-bottom: 5px;
+    }
+
+    .cookiesIngredients p,
+    .cookiesDescription p {
+        font-size: 1em;
+        line-height: 1.6; /* Increase readability */
+    }
+
+    /* Arrows for Navigation */
+    .cookiesArrow {
+        width: 60px; /* Slightly smaller for tablets */
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .cookiesArrow {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+
+    .cookiesContainer, .cookiesSliderWrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%; /* Garantiza que no haya restricciones en el ancho */
+        box-sizing: border-box; /* Asegura que paddings no afecten el ancho total */
+    }
+
+    .cookiesSliderWrapper {
+        max-width: 100%; /* Ajusta según el diseño */
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cookiesSlide {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center; /* Centra el contenido textual */
+        max-width: 100%;    }
+
+    .textInfo {
+        font-size: 1.2rem; /* Ajusta tamaño de texto */
+        max-width: 600px;
+    }
+
+
+}
+
 
 @font-face {
     font-family: 'nunito'; /* Same name as the regular style */
