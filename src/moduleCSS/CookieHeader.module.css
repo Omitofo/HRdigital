@@ -109,6 +109,14 @@ body, html {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1300px){
+    .desktopHeader h2 {
+        font-size: 1.5rem;
+
+    }   
+  
+}
+
 @font-face {
     font-family: 'nunito'; /* Same name as the regular style */
     src: url('../assets/fonts/Nunito/Nunito-Black.woff2') format('woff2'),

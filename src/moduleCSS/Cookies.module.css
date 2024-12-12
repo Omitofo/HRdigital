@@ -1,3 +1,4 @@
+
 /* General container for Cookies */
 .cookiesContainer {
     font-family: 'nunito','Franklin Gothic Medium', Arial, sans-serif;
@@ -255,14 +256,13 @@
     }
 
     .cookiesImage {
-        margin-top: 50px;
         width: 400px; /* Slightly larger image size for tablets */
         height: 400px;
         margin-bottom: 20px; /* Space below the image */
     }
 
     .textInfo {
-        max-width: 90%; /* Ensure text doesn't take up full width */
+        max-width: 100%; 
         padding: 0 15px;
         font-size: 1em; /* Scale text for readability */
     }
@@ -294,7 +294,9 @@
 
 @media (min-width: 1024px) and (max-width: 1300px){
     .tituloCabezera h1 {
+        margin-top: 50px;
         margin-bottom: 80px;
+        font-size: 10em;
     }
 }
 
