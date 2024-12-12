@@ -66,31 +66,40 @@ const Cookies = () => {
 
     return (
         <section className={styles.cookiesContainer}>
-            
-           
-            <div className={styles.cookiesCarousel}>
             <CookieHeader />
             <div className={styles.tituloCabezera}><h1>Monster Cookies</h1></div>
-                <div className={styles.cookiesSliderWrapper}>
-                    <div className={styles.cookiesSlider} ref={sliderRef}>
-                        {cookiesData.map((cookie, index) => (
-                            <div
-                                key={index}
-                                className={`${styles.cookiesSlide} ${
-                                    index === active ? styles.active : ''
-                                }`}
-                            >
-                                <img
-                                    src={cookie.image}
-                                    alt={cookie.name}
-                                    className={styles.cookiesImage}
-                                />
-                                <h2 className={styles.cookiesName}>{cookie.name}</h2>
-                            </div>
-                        ))}
+            <div className={styles.cookiesContent}>
+                {/* Image and Text Carousel */}
+                <div className={styles.carouselSection}>
+                    <div className={styles.cookiesSliderWrapper}>
+                        <div className={styles.cookiesSlider} ref={sliderRef}>
+                            {cookiesData.map((cookie, index) => (
+                                <div
+                                    key={index}
+                                    className={`${styles.cookiesSlide} ${index === active ? styles.active : ''}`}
+                                >
+                                    <div className={styles.slideContent}>
+                                        <img
+                                            src={cookie.image}
+                                            alt={cookie.name}
+                                            className={styles.cookiesImage}
+                                        />
+                                        <div className={styles.textInfo}>
+                                            <h2 className={styles.cookiesName}>{cookie.name}</h2>
+                                            <div className={styles.cookiesIngredients}>
+                                                <h3>Ingredients</h3>
+                                                <p>{cookie.ingredients}</p>
+                                            </div>
+                                            <div className={styles.cookiesDescription}>
+                                                <h3>Description</h3>
+                                                <p>{cookie.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-
-                    {/* Arrows */}
                     <button
                         className={`${styles.cookiesArrow} ${styles.left}`}
                         onClick={handlePrev}
@@ -105,18 +114,6 @@ const Cookies = () => {
                     >
                         {'>'}
                     </button>
-                </div>
-
-                {/* Ingredients and Description */}
-                <div className={styles.cookiesTextContainer}>
-                    <div className={styles.cookiesIngredients}>
-                        <h3>Ingredients</h3>
-                        <p>{cookiesData[active].ingredients}</p>
-                    </div>
-                    <div className={styles.cookiesDescription}>
-                        <h3>Description</h3>
-                        <p>{cookiesData[active].description}</p>
-                    </div>
                 </div>
             </div>
         </section>
