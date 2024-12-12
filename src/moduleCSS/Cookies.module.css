@@ -179,6 +179,7 @@
         padding: 0 20px;
         text-align: center;
     }
+
 }
 
 /* Desktop Styles */
@@ -219,6 +220,14 @@
 
     .slideContent {
         max-width: 100%;
+    }
+
+    .cookiesArrow.left {
+        left:  100px;
+    }
+    
+    .cookiesArrow.right {
+        right: 100px;
     }
 }
 
@@ -289,6 +298,7 @@
         height: 60px;
         font-size: 1.2rem;
     }
+    
 }
 
 @media (min-width: 1024px) and (max-width: 1300px){
