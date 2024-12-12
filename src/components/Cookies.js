@@ -1,7 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Cookie1 from '../assets/Cookies/cookies1.jpg';
+import Cookie1 from '../assets/Cookies/chipcookie4.png';
+import Cookie2 from '../assets/Cookies/oatmeal1.png';
+import Cookie3 from '../assets/Cookies/peanut2.png';
+import Cookie4 from '../assets/Cookies/double1.png';
+import Cookie5 from '../assets/Cookies/snickerdoodle.png';
+import Cookie6 from '../assets/Cookies/white1.png';
 import styles from '../moduleCSS/Cookies.module.css';
 import CookieHeader from './CookieHeader';
+
 
 const Cookies = ( {changeHero}) => {
     const [active, setActive] = useState(0);
@@ -16,31 +22,31 @@ const Cookies = ( {changeHero}) => {
         },
         {
             name: 'Oatmeal Raisin',
-            image: Cookie1,
+            image: Cookie2,
             ingredients: 'Oats, Raisins, Flour, Butter',
             description: 'A healthy oatmeal raisin cookie with a chewy texture.',
         },
         {
             name: 'Peanut Butter',
-            image: Cookie1,
+            image: Cookie3,
             ingredients: 'Peanut Butter, Sugar, Eggs',
             description: 'A soft peanut butter cookie with a rich flavor.',
         },
         {
             name: 'Double Chocolate',
-            image: Cookie1,
+            image: Cookie4,
             ingredients: 'Cocoa, Chocolate Chips, Butter',
             description: 'A double dose of chocolate for the chocolate lover.',
         },
         {
             name: 'Snickerdoodle',
-            image: Cookie1,
+            image: Cookie5,
             ingredients: 'Cinnamon, Sugar, Flour, Butter',
             description: 'A soft and chewy cookie with a cinnamon-sugar coating.',
         },
         {
             name: 'White Chocolate',
-            image: Cookie1,
+            image: Cookie6,
             ingredients: 'White Chocolate Chips, Flour, Sugar, Butter',
             description: 'A creamy white chocolate cookie that melts in your mouth.',
         },
