@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { translations } from '../components/Translations'; 
+import { translations } from '../components/Translations';
+import HeaderHeroD from './HeroDHeader';
 import backgroundpic from '../assets/two.png';
 import styles from '../moduleCSS/HeroD.module.css';
-import US from '../assets/us.png'; // English flagA
+import US from '../assets/us.png'; // English flag
 import spain from '../assets/spain.png'; // Spanish flag
 import japan from '../assets/japan.png'; // Japanese flag
 import korea from '../assets/southkorea.png'; // Korean flag
@@ -10,7 +11,7 @@ import philippines from '../assets/philippines.png'; // Tagalog flag
 import germany from '../assets/germany.png'; // German flag
 
 const HeroD = ({ changeHero }) => {
-    const [language, setLanguage] = useState('ja'); // Default language is English
+    const [language, setLanguage] = useState('ja'); // Default language is Japanese
 
     useEffect(() => {
         // Check if there is a stored language in localStorage
@@ -31,19 +32,7 @@ const HeroD = ({ changeHero }) => {
     return (
         <>
             <div className={styles.banner}>
-            <header className={styles.arriba}>
-                <div className={styles.navLeft}>
-                    <h3 className={styles.navarriba}>{t.community}</h3>
-                    <h3 className={styles.navarriba}>{t.servers}</h3>
-                    <h3 className={styles.navarriba}>{t.blog}</h3>
-                </div>
-                <div className={styles.navRight}>
-                    <button className={styles.authButton}>{t.logIn}</button>
-                    <button className={styles.authButton}>{t.signUp}</button>
-                </div>
-            </header>
-
-
+                <HeaderHeroD changeHero={changeHero} />
 
                 {/* Language selection buttons */}
                 <div className={styles.languageButtons}>

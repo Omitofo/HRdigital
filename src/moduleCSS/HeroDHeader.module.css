@@ -1,0 +1,160 @@
+/* Font Styles */
+@font-face {
+    font-family: 'technor';
+    src: url('../assets/fonts/Technor/Technor-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'technor';
+    src: url('../assets/fonts/Technor/Technor-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'technor';
+    src: url('../assets/fonts/Technor/Technor-Black.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  /* General Styles */
+  .headerHeroD {
+    width: 100%;
+    z-index: 10;
+    font-family: 'technor', sans-serif;
+  }
+  
+  /* Default Desktop Header */
+  .headerHeroD .desktopHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #252525;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .headerHeroD .navLinks {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .headerHeroD .navLinks h2 {
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .headerHeroD .navLinks h2:hover {
+    transform: scale(1.2);
+  }
+  
+  .headerHeroD .navButtons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .headerHeroD .navButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .headerHeroD .iconImage {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+  }
+  
+  .headerHeroD .iconImage:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  
+  /* Mobile Sticky Footer */
+  .headerHeroD .mobileHeader {
+    display: none;
+  }
+  
+  /* Dropdown Menu Styles */
+  .headerHeroD .dropdownMenu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #252525;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+  }
+  
+  .headerHeroD .dropdownMenu h3 {
+    margin: 10px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+  
+  .headerHeroD .dropdownMenu h3:hover {
+    color: #ff9800;
+  }
+  
+  /* Show Dropdown Menu when Active */
+  .headerHeroD .dropdownMenu.active {
+    display: block;
+  }
+  
+  /* Media Query for Mobile and Tablet */
+  @media (max-width: 1200px) {
+    .headerHeroD .desktopHeader {
+      display: none;
+    }
+  
+    .headerHeroD .mobileHeader {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #252525;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1000;
+      border-top: 2px solid white;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .headerHeroD .navButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: none;
+      border: none;
+    }
+  
+    .headerHeroD .iconImage {
+      width: 25px;
+      height: 25px;
+      transition: transform 0.2s ease, filter 0.3s ease;
+    }
+  
+    .headerHeroD .iconImage:hover {
+      transform: scale(1.2);
+      filter: brightness(1.2);
+    }
+  }
+  

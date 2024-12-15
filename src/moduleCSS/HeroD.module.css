@@ -1,3 +1,31 @@
+  /* Regular font style */
+  @font-face {
+    font-family: 'technor'; /* The same name for both styles */
+    src: url('../assets/fonts/Technor/Technor-Regular.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Regular.woff') format('woff');
+    font-weight: normal; /* Regular weight */
+    font-style: normal; /* Normal style */
+  }
+  
+  /* Bold font style */
+  @font-face {
+    font-family: 'technor'; /* Same name as the regular style */
+    src: url('../assets/fonts/Technor/Technor-Bold.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Bold.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
+  }
+  
+  /* Black font style */
+  @font-face {
+    font-family: 'technor'; /* Same name as the regular style */
+    src: url('../assets/fonts/Technor/Technor-Black.woff2') format('woff2'),
+         url('../assets/fonts/Technor/Technor-Black.woff') format('woff');
+    font-weight: bold; /* Bold weight */
+    font-style: normal; /* Normal style */
+  }
+  
+
 .arriba {
     display: flex;
     justify-content: space-between; /* Divide los elementos a los extremos */
@@ -263,32 +291,5 @@
   .words {
     color: white;
     font-family: 'Nippon';
-  }
-  
-  /* Regular font style */
-  @font-face {
-    font-family: 'technor'; /* The same name for both styles */
-    src: url('../assets/fonts/Technor/Technor-Regular.woff2') format('woff2'),
-         url('../assets/fonts/Technor/Technor-Regular.woff') format('woff');
-    font-weight: normal; /* Regular weight */
-    font-style: normal; /* Normal style */
-  }
-  
-  /* Bold font style */
-  @font-face {
-    font-family: 'technor'; /* Same name as the regular style */
-    src: url('../assets/fonts/Technor/Technor-Bold.woff2') format('woff2'),
-         url('../assets/fonts/Technor/Technor-Bold.woff') format('woff');
-    font-weight: bold; /* Bold weight */
-    font-style: normal; /* Normal style */
-  }
-  
-  /* Black font style */
-  @font-face {
-    font-family: 'technor'; /* Same name as the regular style */
-    src: url('../assets/fonts/Technor/Technor-Black.woff2') format('woff2'),
-         url('../assets/fonts/Technor/Technor-Black.woff') format('woff');
-    font-weight: bold; /* Bold weight */
-    font-style: normal; /* Normal style */
   }
   

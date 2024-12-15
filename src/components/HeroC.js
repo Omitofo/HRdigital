@@ -10,7 +10,7 @@ const HeroC = ({ changeHero }) => {
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       <div className={styles.content}>
-        <h1>Bienvenido a mi estudio</h1>
+        <h1>HR studio</h1>
         <button onClick={() => changeHero('D')} className={styles.heroButton}> - </button>
       </div>
     </header>
