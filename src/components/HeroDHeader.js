@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from '../moduleCSS/HeroDHeader.module.css';
 import HomeIcon from '../assets/home.png';
 import InfoIcon from '../assets/atom.png';
@@ -7,10 +7,30 @@ import ExitIcon from '../assets/exit.png';
 
 const HeaderHeroD = ({ changeHero }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => {
+  const toggleDropdown = (event) => {
+    // Evitar que el clic se propague al manejador de clics fuera
+    event.stopPropagation();
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  // Cerrar el menú al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    // Agregar el event listener al montar el componente
+    document.addEventListener('click', handleClickOutside);
+
+    // Limpiar el event listener al desmontar el componente
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className={styles.headerHeroD}>
@@ -49,10 +69,13 @@ const HeaderHeroD = ({ changeHero }) => {
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.active : ''}`}>
-          <h3 onClick={() => alert('Navigating to Home...')}>HOME</h3>
-          <h3 onClick={() => alert('Navigating to Servers...')}>SERVERS</h3>
-          <h3 onClick={() => alert('Navigating to Shop...')}>SHOP</h3>
+        <div
+          className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.active : ''}`}
+          ref={dropdownRef}
+        >
+          <h3>HOME</h3>
+          <h3>SERVERS</h3>
+          <h3>SHOP</h3>
         </div>
       )}
     </header>

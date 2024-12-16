@@ -89,17 +89,17 @@
     display: none; /* Initially hidden */
     position: absolute;
     bottom: 70px;
-    left: 50%;
+    left: 12%;
     transform: translateX(-50%);
     background-color: #252525;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 2000;
   }
   
   .headerHeroD .dropdownMenu h3 {
-    margin: 10px 0;
+    margin: 40px 0;
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
@@ -156,5 +156,7 @@
       transform: scale(1.2);
       filter: brightness(1.2);
     }
-  }
-  
+    .headerHeroD .dropdownMenu {
+        left: 20%;
+     }
+}
