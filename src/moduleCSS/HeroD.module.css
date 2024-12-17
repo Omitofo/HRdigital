@@ -372,4 +372,8 @@
     .model {
       height: 70%;
     }
+    .slider {
+      top: 15%; /* 20% */
+      right: 32%; 
+    }
   }
