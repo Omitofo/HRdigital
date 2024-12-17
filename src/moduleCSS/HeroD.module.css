@@ -83,8 +83,8 @@
 
 .heroButton { 
     position: absolute;
-    bottom: 100px;
-    right: 150px;
+    bottom: 30%;
+    right: 10%;
     font-size: 1.5rem;
     color: #fafafa;
     text-transform: uppercase;
@@ -139,20 +139,8 @@
     transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
   }
   
-  /* Sun Image */
-  .sun {
-    width: 100px;
-    position: absolute;
-    top: 30px;
-    left: 50px;
-  }
   
-  /* Space */
-  .space {
-    height: 60vh; /* Adjust height as needed */
-    width: 100%;
-   
-  }
+  
   
   /* Banner */
   .banner {
@@ -161,7 +149,6 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -211,31 +198,17 @@
     object-fit: cover;
   }
   
-  /* Content Styling */
-  .content {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1450px, 100vw);
-    height: max-content;
-    padding-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-    color: white;
-  }
+
   
   /* Main Heading */
   .ache1 {
     position: absolute;
-    font-size: 8em;
+    font-size: 9em;
     margin: 0;
-    left: 0;
-    bottom: 50px;
+    left: 10%;
+    bottom: 1%;
     font-family: 'Technor';
+    color: white;
   }
   
   /* Glitch Effect */
@@ -255,32 +228,33 @@
     z-index: 2;
   }
   
-  .parrafo {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    font-family: 'Technor';
-  }
-  
   .parrafo2 {
     position: absolute;
-    left: 230px;
-    bottom: 30px;
-    width: 420px;
+    top: 30%;
+    left: 22%;
+    transform: translateX(-50%); 
+    width: 40%;
+    margin-left: 10px;
     text-align: left;
     line-height: 2;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     font-family: 'Technor';
-    font-size: 0.9em;
-  }
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    text-shadow: 
+    0 0 5px rgb(214, 12, 12),   /* Brillo cercano */
+    0 0 10px rgb(214, 12, 12),  /* Brillo medio */
+    0 0 20px rgb(214, 12, 12),  /* Brillo fuerte */
+    0 0 40px rgb(255, 255, 255);  /* Efecto neón fuerte */  }
   
   /* Model Background */
   .model {
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0px;
     background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: top center;
@@ -293,3 +267,106 @@
     font-family: 'Nippon';
   }
   
+  
+  @media (max-width: 450px) {
+
+    .ache1 {
+      font-size: 4em; /* Smaller font size for mobile */
+      text-align: center;
+      margin-bottom: 20%; /* Add margin for spacing */
+      max-width: 900px;
+      bottom: 11%;
+      left: 0;
+    }
+    .parrafo2{
+    max-width: 80%;
+    top: 40px;
+  }
+ 
+  }
+
+  @media (max-width: 850px) {
+
+  
+    /* Adjust model height */
+    .model {
+      height: 50vh;
+      background-size: cover; /* Adjust background size for better visibility */
+      background-position: center;
+    }
+  
+    /* Center-align and adjust heading */
+    .ache1 {
+      font-size: 4em; /* Smaller font size for mobile */
+      text-align: center;
+      margin-bottom: 20%; /* Add margin for spacing */
+      max-width: 900px;
+      bottom: 11%;
+      left: 0;
+    }
+  
+    /* Author Section */
+    .author {
+      text-align: center; /* Center-align text */
+      margin: 10px 0; /* Add spacing */
+      max-width: 100%; /* Allow it to use full width */
+    }
+  
+    /* Description */
+    .parrafo2  {
+      position: fixed; /* Remove absolute positioning */
+      text-align: justify; /* Align text properly */
+      font-size: 0.8em; /* Adjust font size for mobile */
+      line-height: 1.6;   
+      width: 100%;  
+      padding: 0; 
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%); 
+      padding: 0;
+      margin: 0;
+    }
+  
+    /* Content container */
+    .content {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center-align all elements */
+      height: 65%; /* Allow the content to take necessary height */
+      padding: 0; /* Add some padding for spacing */
+
+    }
+  
+    /* Language Buttons */
+    .languageButtons {
+      top: 20px; /* Adjust position for smaller screens */
+      left: auto;
+      transform: translateX(0); /* Reset transform for alignment */
+    }
+  
+    /* Slider */
+    .slider {
+      width: 120px; /* Reduce slider size for mobile */
+      height: 80px;
+      top: 40%; /* Adjust position */
+      right: 20%; /* Center better for mobile */
+    }
+
+    .heroButton{
+      left:50%;
+      bottom: 50px;
+      width: 300px;
+      z-index: 2;
+      transform: translateX(-50%); 
+    }
+  }
+
+
+  @media (min-width: 851px) and (max-width: 1200px) {
+    .ache1 {
+      bottom: 7%;
+      font-size: 10em;
+      left: 0;
+    }
+    
+  }

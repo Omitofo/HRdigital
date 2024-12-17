@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../moduleCSS/HeroC.module.css';
 import HeroImage from '../assets/room.jpg'
-
+import buttonImage from '../assets/atom.png';
 
 const HeroC = ({ changeHero }) => {
   return (
@@ -10,8 +10,7 @@ const HeroC = ({ changeHero }) => {
       style={{ backgroundImage: `url(${HeroImage})` }}
     >
       <div className={styles.content}>
-        <h1>HR studio</h1>
-        <button onClick={() => changeHero('D')} className={styles.heroButton}> - </button>
+        <button onClick={() => changeHero('D')} className={styles.heroButton}> <img src={buttonImage} alt='nexticon'/> </button>
       </div>
     </header>
   );

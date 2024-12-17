@@ -28,11 +28,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    background-color: #ff00ff;
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff, 0 0 90px #ff00ff, 0 0 100px #ff00ff;
-    padding: 20px 30px;
-    border-radius: 15px;
-    color: white;
+    background-color: transparent;
+    padding: 20px 20px;
+    border-radius: 50%;
+    border: 1px solid white;
   }
 
   .heroButton:hover {
@@ -41,12 +40,25 @@
   }
   
   .heroButton img {
-    width: 70px;
-    height: 70px;  /* Larger button for HeroC */
+    width: 20px;
+    height: 20px;  /* Larger button for HeroC */
     transition: transform 0.3s ease-in-out;
   }
   
   .heroButton:hover img {
-    transform: scale(1.5);  /* More pronounced hover effect */
+    transform: scale(1.3);  /* More pronounced hover effect */
   }
   
+  @media (max-width: 685px) {
+    .heroButton img {
+      width: 35px;
+      height: 35px;
+    }
+    .heroButton {
+      border-radius: 40%;
+      padding: 8px 12px;
+    }
+    .content {
+      padding-top: 25%;
+    }
+  }

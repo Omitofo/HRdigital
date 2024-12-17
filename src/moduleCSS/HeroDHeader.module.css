@@ -160,3 +160,9 @@
         left: 20%;
      }
 }
+
+@media (min-width: 750px) and (max-width: 1250px) {
+    .headerHeroD .dropdownMenu {
+        left: 13%;
+    }
+}
