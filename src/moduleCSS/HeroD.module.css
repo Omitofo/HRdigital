@@ -206,7 +206,7 @@
     font-size: 9em;
     margin: 0;
     left: 10%;
-    bottom: 1%;
+    bottom: 6%;
     font-family: 'Technor';
     color: white;
   }
@@ -268,24 +268,7 @@
   }
   
   
-  @media (max-width: 450px) {
-
-    .ache1 {
-      font-size: 4em; /* Smaller font size for mobile */
-      text-align: center;
-      margin-bottom: 20%; /* Add margin for spacing */
-      max-width: 900px;
-      bottom: 11%;
-      left: 0;
-    }
-    .parrafo2{
-    max-width: 80%;
-    top: 40px;
-  }
- 
-  }
-
-  @media (max-width: 850px) {
+  @media (max-width: 730px) {
 
   
     /* Adjust model height */
@@ -366,7 +349,27 @@
     .ache1 {
       bottom: 7%;
       font-size: 10em;
-      left: 0;
+      left: 10%;
     }
     
+  }
+
+  
+  @media (max-width: 450px) {
+
+    .ache1 {
+      font-size: 4em; /* Smaller font size for mobile */
+      text-align: center;
+      margin-bottom: 20%; /* Add margin for spacing */
+      max-width: 900px;
+      bottom: 11%;
+      left: 0;
+    }
+    .parrafo2{
+    max-width: 60%;
+    top: 40px;
+  }
+    .model {
+      height: 70%;
+    }
   }
