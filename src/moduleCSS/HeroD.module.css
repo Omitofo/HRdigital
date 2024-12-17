@@ -358,12 +358,12 @@
   @media (max-width: 450px) {
 
     .ache1 {
-      font-size: 4em; /* Smaller font size for mobile */
+      font-size: 3em; /* Smaller font size for mobile */
       text-align: center;
       margin-bottom: 20%; /* Add margin for spacing */
       max-width: 900px;
       bottom: 15%;
-      left: 0;
+      left: 10%;
     }
     .parrafo2{
     max-width: 65%;
@@ -376,5 +376,21 @@
     .slider {
       top: 15%; /* 20% */
       right: 32%; 
+    }
+  }
+
+  @media (orientation: landscape) {
+    .ache1 {
+      font-size: 7em;
+      bottom: 25%;
+      
+    }
+    .parrafo2{
+    top: 20px;
+    }
+
+    .heroButton {
+      bottom: 10%;
+      right: 30%;
     }
   }
