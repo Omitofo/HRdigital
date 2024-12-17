@@ -345,13 +345,18 @@
   }
 
 
-  @media (min-width: 851px) and (max-width: 1200px) {
+  @media (min-width: 760px) and (max-width: 1200px) {
     .ache1 {
-      bottom: 7%;
-      font-size: 10em;
-      left: 10%;
+      bottom: 20%;
+      font-size: 8em;
+      left: 0;
     }
-    
+    .parrafo2 {
+      top: 6%;
+    }
+    .heroButton{
+      bottom: 10%;
+    }
   }
 
   
@@ -379,18 +384,58 @@
     }
   }
 
-  @media (orientation: landscape) {
+  @media (min-width: 700px) and (orientation: landscape) {
     .ache1 {
-      font-size: 7em;
-      bottom: 25%;
-      
+      bottom: 20%;
+      left: 5%;
     }
     .parrafo2{
-    top: 20px;
+    top: 10%;
+    font-size: 1.3em;
     }
 
+    .heroButton { 
+      left: 35%; 
+      bottom: 10%; 
+      max-width: fit-content ;    
+    }
+    
+    @media (min-width: 1000px) and (max-width: 1400px) and (orientation: landscape) {
+      .ache1 {
+        font-size: 7rem;
+        left: 10%;
+        bottom: 25%;
+      }
+      .heroButton {
+        left:  45%;
+        bottom: 10%;
+      }
+    
+    }
+  }
+
+  @media (max-width: 750px) and (orientation: landscape) {
+    .ache1{
+      bottom: 5%;
+    }
+    .model {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 700px) and (orientation: landscape) {
+    .ache1{
+      font-size: 3em;
+      bottom: 0;
+      left: 15%;
+    }
+    .parrafo2{
+      width: 35%;
+      left: 20%;
+    }
     .heroButton {
-      bottom: 10%;
-      right: 30%;
+      padding: 5px 10px;
+      font-size: 1em;
+      max-width: fit-content;
     }
   }
