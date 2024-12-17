@@ -366,8 +366,9 @@
       left: 0;
     }
     .parrafo2{
-    max-width: 60%;
-    top: 40px;
+    max-width: 65%;
+    top: 10%;
+    font-weight: 600;
   }
     .model {
       height: 70%;
