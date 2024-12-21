@@ -117,7 +117,7 @@
   }
   
   /* Media Query for Mobile and Tablet */
-  @media (max-width: 1550px){
+  @media (max-width: 1250px){
     .headerHeroD .desktopHeader {
       display: none;
     }
