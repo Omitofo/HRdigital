@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from '../moduleCSS/HeroDHeader.module.css';
 import HomeIcon from '../assets/home.png';
 import CartIcon from '../assets/exit2red.png';
-import ShoppingCart from '../assets/shoppingCart.png';
+import WhiteAtom from '../assets/whiteatom.png';
 import { translations } from './Translations';
 
 const HeaderHeroD = ({ changeHero, language, handleLanguageChange }) => {
@@ -53,7 +53,7 @@ const HeaderHeroD = ({ changeHero, language, handleLanguageChange }) => {
           <img src={HomeIcon} alt={translations[language].header.home} className={styles.iconImage} />
         </button>
         <button className={styles.navButton}>
-          <img src={ShoppingCart} alt="Exit" className={styles.iconImage} />
+          <img src={WhiteAtom} alt="Exit" className={styles.iconImage} />
         </button>
         <button className={styles.navButton} onClick={() => changeHero('E')}>
           <img src={CartIcon} alt={translations[language].header.cookies} className={styles.iconImage} />
