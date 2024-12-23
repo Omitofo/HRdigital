@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from '../moduleCSS/HeroDHeader.module.css';
 import HomeIcon from '../assets/home.png';
-import InfoIcon from '../assets/atom.png';
 import CartIcon from '../assets/exit2red.png';
 import ShoppingCart from '../assets/shoppingCart.png';
 import { translations } from './Translations';
@@ -54,9 +53,6 @@ const HeaderHeroD = ({ changeHero, language, handleLanguageChange }) => {
           <img src={HomeIcon} alt={translations[language].header.home} className={styles.iconImage} />
         </button>
         <button className={styles.navButton}>
-          <img src={InfoIcon} alt="Info" className={styles.iconImage} />
-        </button>
-        <button className={styles.navButton}>
           <img src={ShoppingCart} alt="Exit" className={styles.iconImage} />
         </button>
         <button className={styles.navButton} onClick={() => changeHero('E')}>
@@ -70,10 +66,11 @@ const HeaderHeroD = ({ changeHero, language, handleLanguageChange }) => {
           className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.active : ''}`}
           ref={dropdownRef}
         >
-          <h3>{translations[language].header.home}</h3>
           <h3>{translations[language].header.servers}</h3>
           <h3>{translations[language].header.shop}</h3>
           <h3>{translations[language].header.discord}</h3>
+          <h3>{translations[language].logIn}</h3>
+          <h3>{translations[language].signUp}</h3>
         </div>
       )}
 
