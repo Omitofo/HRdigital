@@ -93,6 +93,7 @@
     background-color: #252525;
     color: white;
     font-weight: 600;
+    cursor: pointer;
   }
   
   /* Mobile Sticky Footer */
