@@ -59,7 +59,7 @@
   
   .headerHeroD .navButtons {
     display: flex;
-    gap: 15px;
+    gap: 40px;
   }
   
   .headerHeroD .navButton {
@@ -77,6 +77,22 @@
   .headerHeroD .iconImage:hover {
     transform: scale(1.2);
     filter: brightness(1.2);
+  }
+
+  .logOrRegister{
+    padding: 5px 10px;
+    font-family:'technor','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    border: 1px solid white;
+    background-color: white;
+    color:#252525;
+    border-radius: 15px;
+    font-weight: 600;
+  }
+  .logOrRegister:hover{
+    transform: scale(1.1);
+    background-color: #252525;
+    color: white;
+    font-weight: 600;
   }
   
   /* Mobile Sticky Footer */
@@ -165,5 +181,5 @@
     .headerHeroD .dropdownMenu {
         left: 13%;
     }
-    
+
 }

@@ -40,6 +40,8 @@ const HeaderHeroD = ({ changeHero, language, handleLanguageChange }) => {
           <h2>{translations[language].header.discord}</h2>
         </div>
         <div className={styles.navButtons}>
+          <button className={styles.logOrRegister}>{translations[language].logIn}</button>
+          <button className={styles.logOrRegister}>{translations[language].signUp}</button>
           <button className={styles.navButton} onClick={() => changeHero('E')}>
             <img src={CartIcon} alt={translations[language].header.cookies} className={styles.iconImage} />
           </button>
