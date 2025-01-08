@@ -6,10 +6,16 @@
     background-color: #17232a;
     padding: 0;
     text-align: center;
-    min-height: 100vh;
+    height: 100dvh;
     cursor: url('../assets/cookie.png'), auto;
 }
 
+/* Fallback para navegadores que no soporten dvh */
+@supports not (height: 100dvh) {
+    .cookiesContainer {
+        height: 100vh; /* Usado en caso de que el navegador no soporte dvh */
+    }
+}
 /* Carousel */
 .cookiesCarousel {
     position: relative;
