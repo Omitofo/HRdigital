@@ -6,7 +6,8 @@
     background-color: #17232a;
     padding: 0;
     text-align: center;
-    height: 100dvh;
+    height: auto;
+    min-height: 100dvh;
     cursor: url('../assets/cookie.png'), auto;
 }
 
